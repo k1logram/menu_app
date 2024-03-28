@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for menu in menus %}
+        <p>
+            <button class="category-dropdown-header__button" type="button" tabindex="-1" style="opacity: 0.8; margin-left: 10px;">
+            <a class="category-dropdown-header__all-products" href="{% url 'menu_app:category' menu.slug %}">{{ menu.name }}</a>
+            </button>
+        </p>
+    {% endfor %}
+{% endblock %}
